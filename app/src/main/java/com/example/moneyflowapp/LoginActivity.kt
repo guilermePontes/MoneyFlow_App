@@ -8,6 +8,14 @@ import androidx.appcompat.app.AppCompatActivity
 
 class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
+
+        val tvCriarConta = findViewById<TextView>(R.id.tvCriarConta)
+
+        tvCriarConta.setOnClickListener {
+            val intent = Intent(this, CadastroEtapa1Activity::class.java)
+            startActivity(intent)
+        }
+
         super.onCreate(savedInstanceState)
 
         // Carrega o layout da tela de login
